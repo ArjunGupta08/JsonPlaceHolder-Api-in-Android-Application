@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Get.PostActivity"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/postss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All User Posts"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <Button
+        android:id="@+id/commentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Comments"
+        app:layout_constraintTop_toTopOf="@id/postss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/postss"/>
+
+    <EditText
+        android:id="@+id/postId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter User Id"
+        android:inputType="number"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        style="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintTop_toBottomOf="@id/postss"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnId"
+        app:layout_constraintTop_toTopOf="@id/btnId"
+        app:layout_constraintBottom_toBottomOf="@id/btnId">
+
+        <RadioButton
+            android:id="@+id/asc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ascending"/>
+
+        <RadioButton
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descending"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@id/postId"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        tools:listitem="@layout/json_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnId"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
