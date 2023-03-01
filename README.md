@@ -27,3 +27,5 @@ REQUEST METHOD:
    - @Body
    - @Query
    - @Query map
+
+- And also learnt about @FormUrlEncoded and @Multipart but didn't find a way to implement these annotations in this application but will definitely going to use these in future as per the requirements.
