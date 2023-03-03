@@ -1,5 +1,5 @@
 ## ` JsonPlaceHolder API integration `
-[Get the API Link here 🔗](https://jsonplaceholder.typicode.com/)
+[🔗--> Get the API Link here](https://jsonplaceholder.typicode.com/) :-:[🔗--> See the full guided video of this application](https://jsonplaceholder.typicode.com/)
 
 ### This android application deals with user's post and comments, displaying user's related data using JsonPlaceHolder api.
 
